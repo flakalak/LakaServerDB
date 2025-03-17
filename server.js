@@ -3,7 +3,7 @@
 //IFT 458: Middleware Prog & Database Sec
 //Professor: Dinesh Sthapit
 //Due Date: March 16, 2025
-//Lakalaka_9231-403_Module5 Activity 1: Introducing Git with VScode
+//Lakalaka_9231-403_Module5 Lab 1: Using Git with VScode
 
 // Required for Node to read .env file
 const dotenv = require('dotenv');
