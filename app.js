@@ -7,10 +7,15 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser');
 
-
+const loggerMiddleware = require('./custom-middlewares/loggerMiddleware');
 
 // start express app
-const app = express()
+const app = express();
+
+// Use the middleware globally
+app.use(loggerMiddleware);
+
+
 
 // 1) GLOBAL MIDDLEWARES to log the request to the console
 if (process.env.NODE_ENV === 'development') {
@@ -61,5 +66,11 @@ app.use(`${process.env.API_VERSION}/users`, userRouter);
 const booksRoutes = require('./routes/bookRoutes.js');
 app.use(`${process.env.API_VERSION}/books`, booksRoutes);
 app.use('/books', booksRoutes);
+
+// Add a simple route to test the middleware
+app.get('/', (req, res) => {
+  res.send('Testing Middleware');
+});
+
 
 module.exports = app;
