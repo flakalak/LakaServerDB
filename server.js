@@ -2,8 +2,8 @@
 //Information Technology, Arizona State University
 //IFT 458: Middleware Prog & Database Sec
 //Professor: Dinesh Sthapit
-//Due Date: March 16, 2025
-//Lakalaka_9231-403_Module5 Activity 1: Introducing Git with VScode
+//Due Date: May 2, 2025
+//Lakalaka_9231-403_Module8 Final Project: Git with VScode
 
 // Required for Node to read .env file
 const dotenv = require('dotenv');
